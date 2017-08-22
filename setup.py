@@ -7,11 +7,11 @@ from setuptools import setup
 with open('README.rst') as infile:
     LONG_DESCRIPTION = infile.read()
 
-install_requires = ['glue-core>=0.10.4',
-                    'glue-vispy-viewers>=0.7.2']
+install_requires = ['glue-core>=0.11.0',
+                    'glue-vispy-viewers>=0.8']
 
 setup(name='glueviz',
-      version='0.11.0.dev0',
+      version='0.11.0',
       description='Multidimensional data visualization across files',
       long_description=LONG_DESCRIPTION,
       author='Glue developers',
