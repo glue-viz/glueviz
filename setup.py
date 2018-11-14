@@ -11,7 +11,7 @@ install_requires = ['glue-core>=0.14.0',
                     'glue-vispy-viewers>=0.11']
 
 setup(name='glueviz',
-      version='0.14.0',
+      version='0.15.0.dev0',
       description='Multidimensional data visualization across files',
       long_description=LONG_DESCRIPTION,
       author='Glue developers',
