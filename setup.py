@@ -1,35 +1,16 @@
 #!/usr/bin/env python
-
 from __future__ import print_function
+
+import sys
+from distutils.version import LooseVersion
+
+try:
+    import setuptools
+    assert LooseVersion(setuptools.__version__) >= LooseVersion('30.3')
+except (ImportError, AssertionError):
+    sys.stderr.write("ERROR: setuptools 30.3 or later is required\n")
+    sys.exit(1)
 
 from setuptools import setup
 
-with open('README.rst') as infile:
-    LONG_DESCRIPTION = infile.read()
-
-install_requires = ['glue-core>=0.14.0',
-                    'glue-vispy-viewers>=0.11']
-
-setup(name='glueviz',
-      version='0.15.0.dev0',
-      description='Multidimensional data visualization across files',
-      long_description=LONG_DESCRIPTION,
-      author='Glue developers',
-      author_email='glueviz@gmail.com',
-      url='http://glueviz.org',
-      install_requires=install_requires,
-      classifiers=[
-          'Intended Audience :: Science/Research',
-          'Operating System :: OS Independent',
-          'Programming Language :: Python',
-          'Programming Language :: Python :: 2',
-          'Programming Language :: Python :: 2.7',
-          'Programming Language :: Python :: 3',
-          'Programming Language :: Python :: 3.3',
-          'Programming Language :: Python :: 3.4',
-          'Programming Language :: Python :: 3.5',
-          'Programming Language :: Python :: 3.6',
-          'Topic :: Scientific/Engineering :: Visualization',
-          'License :: OSI Approved :: BSD License'
-          ],
-      )
+setup(use_scm_version=True)
