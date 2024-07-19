@@ -12,6 +12,7 @@ It can be installed with::
 This currently installs:
 
 * `glue-core <https://github.com/glue-viz/glue>`_, the main glue package
+* `glue-qt <https://github.com/glue-viz/glue-qt>`_, the Qt-based desktop glue application
 * `glue-vispy-viewers <https://github.com/glue-viz/glue-vispy-viewers>`_,
   which adds 3D viewers
 
