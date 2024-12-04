@@ -1,7 +1,55 @@
 [build-system]
-requires = ["setuptools",
-            "setuptools_scm",
-            "wheel"]
-build-backend = 'setuptools.build_meta'
+build-backend = "setuptools.build_meta"
+
+requires = [
+  "setuptools>=61.2",
+  "setuptools-scm",
+]
+
+[project]
+name = "glueviz"
+description = "Multidimensional data visualization across files"
+readme = "README.rst"
+authors = [
+  { name = "Glue developers", email = "glueviz@gmail.com" },
+]
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Visualization",
+]
+dynamic = [
+  "version",
+]
+dependencies = [
+  "glue-core[all]>=1.1",
+  "glue-qt>=0.1",
+  "glue-vispy-viewers>=1.0.3",
+]
+
+[project.urls]
+homepage = "https://www.glueviz.org/"
+documentation = "https://docs.glueviz.org"
+repository = "https://github.com/glue-viz"
+
+[project.optional-dependencies]
+qt = [
+    "PyQt5>=5.14"
+]
+
+[tool.setuptools]
+zip-safe = true
+include-package-data = false
+
+[tool.setuptools.packages.find]
+namespaces = false
 
 [tool.setuptools_scm]
